@@ -1,0 +1,25 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<char_freq_$ &le; 0.045<br/>gini = 0.475<br/>samples = 3450<br/>value = [2112, 1338]<br/>class = Not Spam>, fillcolor="#f5d1b6"] ;
+1 [label=<word_freq_remove &le; 0.065<br/>gini = 0.345<br/>samples = 2555<br/>value = [1988, 567]<br/>class = Not Spam>, fillcolor="#eca571"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<char_freq_! &le; 0.395<br/>gini = 0.262<br/>samples = 2333<br/>value = [1972, 361]<br/>class = Not Spam>, fillcolor="#ea985d"] ;
+1 -> 2 ;
+3 [label=<gini = 0.17<br/>samples = 2044<br/>value = [1852, 192]<br/>class = Not Spam>, fillcolor="#e88e4e"] ;
+2 -> 3 ;
+4 [label=<capital_run_length_total &le; 64.5<br/>gini = 0.486<br/>samples = 289<br/>value = [120, 169]<br/>class = Spam>, fillcolor="#c6e3f7"] ;
+2 -> 4 ;
+5 [label=<gini = 0.435<br/>samples = 150<br/>value = [102, 48]<br/>class = Not Spam>, fillcolor="#f1bc96"] ;
+4 -> 5 ;
+6 [label=<gini = 0.225<br/>samples = 139<br/>value = [18, 121]<br/>class = Spam>, fillcolor="#56ace9"] ;
+4 -> 6 ;
+7 [label=<gini = 0.134<br/>samples = 222<br/>value = [16, 206]<br/>class = Spam>, fillcolor="#48a5e7"] ;
+1 -> 7 ;
+8 [label=<word_freq_hp &le; 0.385<br/>gini = 0.239<br/>samples = 895<br/>value = [124, 771]<br/>class = Spam>, fillcolor="#59ade9"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<gini = 0.146<br/>samples = 831<br/>value = [66, 765]<br/>class = Spam>, fillcolor="#4aa5e7"] ;
+8 -> 9 ;
+10 [label=<gini = 0.17<br/>samples = 64<br/>value = [58, 6]<br/>class = Not Spam>, fillcolor="#e88e4d"] ;
+8 -> 10 ;
+}
